@@ -1,0 +1,18 @@
+/*Write a program that takes a destination string and a source string as input. Then, take
+an integer n as input and append only the first n characters of the source string to the
+destination. Print the new concatenated string.*/
+#include <stdio.h>
+#include <string.h>
+int main(){
+    char x1[30];
+    char x2[15];
+    int n;
+    printf("n : \n");
+    scanf("%d",&n);
+    printf("enter x1 : \n");
+    scanf("%s",x1);
+    printf("enter x2 : \n");
+    scanf("%s",x2);
+    strncat(x1,x2,n);
+    printf("%s", x1);
+}
