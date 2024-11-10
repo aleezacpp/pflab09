@@ -1,0 +1,43 @@
+/*Write a C program with a user-defined function calculate to perform basic arithmetic operations
+such as addition, subtraction, multiplication, and division. The program should take two
+numbers and an operation choice as input, and then use the function to perform the operation.*/
+#include <stdio.h>
+int add(int a,int b){
+    return a+b;
+}
+int sub(int a,int b){
+ 
+    return a-b;
+}
+int prod(int a,int b){
+   
+    return a*b;
+}
+float divi(int a,int b){
+    
+    return a/b;
+}
+int main(){
+    int n,a,b;
+    printf("ENTER a : \n");
+    scanf("%d",&a);
+    printf("ENTER b : \n");
+    scanf("%d",&b);
+    printf("ENTER 1 TO ADD \n ENTER 2 TO SUBTRACT \n ENTER 3 TO MULTIPLY \n ENTER 4 TO DIVIDE : \n");
+    scanf("%d",&n);
+    // int x= add(a,b);
+    // int y= sub(a,b);
+    // int w= prod(a,b);
+    // float u= div(a,b);
+    switch(n) {
+        case 1: printf("%d",add(a,b));
+        break;
+        case 2: printf("%d",sub(a,b));
+        break;
+        case 3: printf("%d",prod(a,b));
+        break;
+        case 4: printf("%f",divi(a,b));
+        break;
+    }
+
+}
