@@ -1,0 +1,31 @@
+/*Create a function that reverses a given string and returns the reversed string. Use this function
+in the main program to display the reversed string entered by the user.*/
+#include <stdio.h>
+#include <string.h>
+void func(char arr[]) {
+    int x = strlen(arr);
+    for (int i = 0; i < x / 2; i++) {
+        char temp = arr[i];
+        arr[i] = arr[x - 1 - i];
+        arr[x - 1 - i] = temp;
+    }
+}
+
+int main() {
+    int x;
+    printf("Enter x: \n");
+    scanf("%d", &x);
+
+    char arr[x][21];
+    for (int i = 0; i < x; i++) {
+        printf("arr[%d]: \n", i);
+        scanf("%s", arr[i]); 
+    }
+
+    for (int i = 0; i < x; i++) {
+        func(arr[i]);  
+        printf("Reversed arr[%d]: %s\n", i, arr[i]);
+    }
+
+    return 0;
+}
